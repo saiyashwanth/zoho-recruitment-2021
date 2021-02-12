@@ -1,0 +1,34 @@
+
+ import java.util.Scanner;
+ class Solution{
+    
+    
+    public static void main(String[]args){
+     Scanner sc=new Scanner(System.in);
+     String str=sc.next();
+    
+     int i, j, rows;
+  int length=str.length();
+  
+   rows=length;
+   String pattern="";
+   int mid=(length%2!=0)?length/2:(length/2)-1;
+   int itr=mid;
+
+    for(i=1; i<=rows; i++)
+    {
+        
+        for(j=i; j<rows; j++)
+        {
+            System.out.print(" ");
+        }
+            if(itr==length){
+                itr=0;
+            }
+            pattern+=str.charAt(itr);
+            System.out.println(pattern);
+            itr++;
+    }
+    }
+    
+}
